@@ -8,5 +8,5 @@ This code was developed with the help from Daniel Shiffman (https://twitter.com/
 > Coding Challenge #134.1: Heart Curve : https://www.youtube.com/watch?v=oUBAi9xQ2X4 
 
 
-*Live version of the code in the following link* https://editor.p5js.org/barradeus/full/6StxAWMgw
+***Live version of the code in the following link*** https://editor.p5js.org/barradeus/full/6StxAWMgw
 
