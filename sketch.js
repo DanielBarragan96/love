@@ -1,7 +1,5 @@
-// Perlin Noise GIF Loops
-// Daniel Shiffman
-// https://thecodingtrain.com/CodingChallenges/136.2-perlin-noise-gif-loops.html
-// https://youtu.be/c6K-wJQ77yQ
+// Daniel Barragan Alvarez
+// 21/03/2020
 
 const totalFrames = 480;
 let counter = 0;
@@ -9,17 +7,21 @@ let record = false;
 
 let particles = new Array(200);
 var elem;
+let mySound;
 
 function setup() {
   createCanvas(1920, 1080);
   for (let i = 0; i < particles.length; i++) {
     particles[i] = new Particle();
   }
+  soundFormats('mp3', 'ogg');
+  mySound = loadSound('song.mp3');
 }
 
 function mousePressed() {	
   elem = document.getElementById("defaultCanvas0");
   elem.webkitRequestFullscreen();
+  mySound.play();
 }
 function draw() {
   let percent = float(counter % totalFrames) / totalFrames;
@@ -37,6 +39,6 @@ function render(percent) {
 	fill(255);
 	textSize(12);
 	textFont('Helvetica', 180);
-	text('love', 0, 50);
+	text('TE AMO', 0, 50);
 	textAlign(CENTER);
 }
