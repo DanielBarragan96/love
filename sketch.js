@@ -8,6 +8,7 @@ let record = false;
 let particles = new Array(200);
 var elem;
 let mySound;
+let playing = false;
 
 function setup() {
   createCanvas(1920, 1080);
@@ -21,7 +22,11 @@ function setup() {
 function mousePressed() {	
   elem = document.getElementById("defaultCanvas0");
   elem.webkitRequestFullscreen();
-  mySound.play();
+  
+  if(!playing) {
+    mySound.play();
+    playing = true;
+  }
 }
 function draw() {
   let percent = float(counter % totalFrames) / totalFrames;
